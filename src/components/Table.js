@@ -1,4 +1,5 @@
 import React from 'react';
+import LinkContainer from './LinkContainer'
 
 const TableHeader = () => { 
     // boilerplate table header functional component
@@ -29,10 +30,19 @@ const TableBody = props => {
     return <tbody>{rows}</tbody>;
 }
 
-const Table = (props) => {
-//    const { linkData, removeLink } = props;
+const Table = props => {
+        const { linkData, removeLink } = props;
+        //const linkData = this.props.linkData;
+       // const removeLink = this.props.removeLink;
+        
     {/*TODO - return <table> component, TableHeader and TableBody  */}
-
+    return(
+        <table> 
+            <TableHeader/>
+            <TableBody linkData={linkData} removeLink={removeLink}/>
+        </table>
+    )
 }
 
 export default Table;
+   
